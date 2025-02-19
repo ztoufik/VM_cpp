@@ -5,6 +5,6 @@
 
 
 TEST_CASE("testing the test function") {
-    CHECK(test("test") == "test");
+    CHECK(test2("test") == "test");
 }
 

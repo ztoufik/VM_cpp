@@ -1,8 +1,7 @@
-file(GLOB SOURCES *.cc)
+file(GLOB SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/*.cc")
 
 add_executable(unit_tests ${SOURCES})
 
-#include_directories(${CMAKE_CURRENT_SOURCE_DIR}/inc/)
 # Explicitly include doctest headers
 target_include_directories(unit_tests
     PRIVATE ${doctest_SOURCE_DIR}/doctest

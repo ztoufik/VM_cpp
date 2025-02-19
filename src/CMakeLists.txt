@@ -1,6 +1,7 @@
+file(GLOB CPP_FILES "${CMAKE_CURRENT_SOURCE_DIR}/cpp/*.cc")
 
 add_library(VM_lib
-    ${CMAKE_CURRENT_SOURCE_DIR}/cpp/VM.cc
+    ${CPP_FILES}
 )
 
 # Specify include directories for this library
