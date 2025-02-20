@@ -1,10 +1,31 @@
+#include<memory>
+
 #include"VM.h"
+#include"Program.h"
 
+namespace VM{
 
-std::string test(std::string test){
-    return test;
-}
+    VM create_vm(Chunk& chunk){
+        return make_unique<_VM>(chunk);
+    }
 
-std::string test2(std::string test){
-    return test;
-}
+    class _VM{
+        using Ip=int;
+        public:
+            VM(Chunk& chunk):_chunk(chunk){
+                _ip=0;
+            }
+
+            void load(Chunk&){
+
+            }
+
+            void run(){
+
+            }
+
+        private:
+             Chunk& _chunk;
+             Ip _ip;
+    };
+};
